@@ -66,10 +66,14 @@ const Main = () => {
     <div className=' overflow-x-hidden'>
       <div className='h-screen bg-cover bg-center' style={{ backgroundImage: `url(${BG})` }}>
         <Navbar />
-        <div className='text-white  text-center'>
-          <p className=' pt-60 m-auto  lg:text-5xl font-extrabold'>PURE ORGANIC FARM PRODUCE </p>
-          <p className=' drop-shadow-lg py-5'>Lorem ipsum dolor sit amet consectetur. Eget gravida integer adipiscing imperdiet elit<br /> sed. Eget lacus massa ultrices feugiat eleifend condimentum nullam risus. In nisl sed<br /> aliquet non quam odio. Nisl condimentum </p>
-          <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300'>Explore Now</button>
+        <div className='text-white text-center'>
+          <p className='pt-60 m-auto lg:text-5xl font-extrabold'>PURE ORGANIC FARM PRODUCE</p>
+          <p className='drop-shadow-lg py-5'>
+            We offer a wide range of pure organic farm produce, carefully grown and harvested to ensure freshness and quality.<br /> Our commitment to sustainable farming practices ensures that you get nutritious and delicious products every time.<br /> Try our organic fruits, vegetables, grains, and more for a healthy lifestyle.
+          </p>
+          <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg font-semibold hover:bg-[#396b43] transition-colors duration-300'>
+            Explore Now
+          </button>
         </div>
         {/* <div className='flex justify-center gap-5 px-10 py-4 rounded-lg bg-[#D9D9D9] bg-opacity-20 w-fit lg:mx-32  '>
        
@@ -185,8 +189,8 @@ const Main = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           {/* Slider 1 */}
           <div className='w-fit rounded-lg shadow-md'>
-          <div className='w-fit h-fit'>
-            <img src={grapes} alt='Grapes' className='rounded-t-lg lg:h-fit lg:w-fit' />
+            <div className='w-fit h-fit'>
+              <img src={grapes} alt='Grapes' className='rounded-t-lg lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Grapes</h1>
@@ -197,8 +201,8 @@ const Main = () => {
 
           {/* Apples */}
           <div className='w-fit rounded-lg shadow-md'>
-          <div className='w-fit h-fit'>
-            <img src={apples} alt='Apples' className='rounded-t-lg lg:h-fit lg:w-fit' />
+            <div className='w-fit h-fit'>
+              <img src={apples} alt='Apples' className='rounded-t-lg lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Apples</h1>
@@ -209,27 +213,27 @@ const Main = () => {
 
           {/* Bananas */}
           <div className='w-fit rounded-lg shadow-md'>
-          <div className='w-fit h-fit'>
-            <img src={bananas} alt='Bananas' className='rounded-t-lg lg:h-fit lg:w-fit' />
+            <div className='w-fit h-fit'>
+              <img src={bananas} alt='Bananas' className='rounded-t-lg lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Bananas</h1>
               <p className='text-sm text-center'>Bananas are a tropical fruit with a creamy texture and sweet flavor. They are a good source of potassium, vitamins, and dietary fiber, making them a nutritious addition to your diet.</p>
               <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
             </div>
- 
+
           </div>
 
           {/* Oranges */}
           <div className='w-fit rounded-lg shadow-md'>
             <div className='w-fit h-fit'>
               <img src={oranges} alt='Oranges' className='rounded-t-lg lg:h-fit lg:w-fit' />
-              </div>
-              <div className='p-4'>
-                <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
-                <p className='text-sm text-center'>Oranges are citrus fruits known for their refreshing taste and high vitamin C content. They come in different varieties, each offering a unique flavor profile.</p>
-                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
-              </div>
+            </div>
+            <div className='p-4'>
+              <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
+              <p className='text-sm text-center'>Oranges are citrus fruits known for their refreshing taste and high vitamin C content. They come in different varieties, each offering a unique flavor profile.</p>
+              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
+            </div>
 
           </div>
 
@@ -237,13 +241,13 @@ const Main = () => {
           <div className='w-fit rounded-lg shadow-md'>
             <div className='w-fit h-fit'>
               <img src={strawberries} alt='Strawberries' className='rounded-t-lglg:h-fit lg:w-fit' />
-              </div>
-              <div className='p-4'>
-                <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
-                <p className='text-sm text-center'>Strawberries are juicy and flavorful berries packed with antioxidants and vitamins. They are commonly used in desserts, salads, and smoothies for their delicious taste.</p>
-                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
-              </div>
-  
+            </div>
+            <div className='p-4'>
+              <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
+              <p className='text-sm text-center'>Strawberries are juicy and flavorful berries packed with antioxidants and vitamins. They are commonly used in desserts, salads, and smoothies for their delicious taste.</p>
+              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+            </div>
+
           </div>
           <div className='w-fit rounded-lg shadow-md'>
             <div className='w-fit h-fit'>
@@ -278,8 +282,8 @@ const Main = () => {
           {/* Content Section */}
           <div className='w-full lg:w-3/5 px-4'>
             <div className='mb-6'>
-              <h2 className='text-lg text-[#013b0d] font-bold mb-2'>
-                GENERAL FOOD SUPPLY
+              <h2 className='text-lg lg:text-3xl text-[#013b0d] font-bold mb-2'>
+                Quality Organic Produce
                 <span
                   className='cursor-pointer ml-2'
                   onClick={() => toggleInfo('generalFood')}
@@ -289,15 +293,15 @@ const Main = () => {
               </h2>
               {showInfo.generalFood && (
                 <p className='text-sm'>
-                  Our team possesses strong negotiation skills to ensure you get the
-                  best deals and terms for your investments. We prioritize your
-                  interests and work diligently to achieve favorable outcomes.
+                  We take pride in our commitment to providing fresh, organic produce that is
+                  grown sustainably without the use of harmful chemicals. Your health and
+                  well-being are our top priorities.
                 </p>
               )}
             </div>
             <div className='mb-6'>
-              <h2 className='text-lg text-[#013b0d] font-bold mb-2'>
-                HEALTHY DAIRY PRODUCTS
+              <h2 className='text-lg lg:text-3xl text-[#013b0d] font-bold mb-2'>
+                Nutritious Dairy Products
                 <span
                   className='cursor-pointer ml-2'
                   onClick={() => toggleInfo('healthyDairy')}
@@ -307,16 +311,15 @@ const Main = () => {
               </h2>
               {showInfo.healthyDairy && (
                 <p className='text-sm'>
-                  Experience unparalleled luxury and comfort with our carefully
-                  curated properties. Each space is designed to provide a sense of
-                  relaxation and indulgence, ensuring a delightful living experience
-                  for our clients.
+                  Our dairy products are sourced from healthy, well-cared-for animals, ensuring
+                  the highest quality and nutritional value. From milk to cheese, taste the
+                  difference with our wholesome offerings.
                 </p>
               )}
             </div>
             <div>
-              <h2 className='text-lg text-[#013b0d] font-bold mb-2'>
-                RESTAURANT SERVICE
+              <h2 className='text-lg lg:text-3xl text-[#013b0d] font-bold mb-2'>
+                Farm-to-Table Experience
                 <span
                   className='cursor-pointer ml-2'
                   onClick={() => toggleInfo('restaurantService')}
@@ -326,10 +329,9 @@ const Main = () => {
               </h2>
               {showInfo.restaurantService && (
                 <p className='text-sm'>
-                  We offer competitive and affordable prices without compromising on
-                  quality. Enjoy the best value for your money with our range of
-                  premium properties and services, tailored to meet your budget and
-                  preferences.
+                  Join us for a unique farm-to-table dining experience where every ingredient
+                  is freshly harvested from our fields. Taste the essence of nature in every
+                  bite, prepared with love and care by our talented chefs.
                 </p>
               )}
             </div>
@@ -346,10 +348,26 @@ const Main = () => {
 
           {/* Content Section */}
           <div className='w-full lg:w-3/5 px-4'>
-            <h1 className='text-3xl font-bold mb-6 '>ALTHANTIUS FARM</h1>
+            <h1 className='text-3xl  font-bold mb-3 '>ALTHANTIUS FARM</h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur. Nibh adipiscing etiam enim ullamcorper rutrum aliquet eget lacus sollicitudin. Aliquet morbi ridiculus velit mattis. Sit lacus vulputate phasellus enim. Tellus amet diam laoreet nisl quam.Lorem ipsum dolor sit amet consectetur. Nibh adipiscing etiam enim ullamcorper rutrum aliquet eget lacus sollicitudin. Aliquet morbi ridiculus velit mattis. Sit lacus vulputate phasellus enim. Tellus amet diam laoreet nisl quam.</p>
-          </div>
+            <p className='py-3'>
+              Althantius Farm is dedicated to providing the highest quality organic produce to our community. With a focus on sustainable farming practices and a deep-rooted passion for agriculture, we strive to bring fresh, nutritious, and flavorful food to your table. Our commitment to environmental stewardship ensures that every product you receive is not only good for you but also good for the planet.
+            </p>
+            <p className=''>
+              Our journey began decades ago when our founders, a group of visionary farmers, came together with a shared dream of creating a farm that would revolutionize the way we think about food. Today, that dream is a reality, and Althantius Farm stands as a testament to the power of dedication, hard work, and a love for nature.
+            </p>
+            <p className='lg:flex hidden py-3'>
+              What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
+            </p>
+            <p className='lg:flex hidden '>
+              Our range of products includes a variety of fruits, vegetables, grains, and dairy items, all grown and produced with the utmost care and attention to detail. Whether you're looking for fresh greens for your salad, juicy fruits for a refreshing snack, or wholesome dairy products for your family, Althantius Farm has got you covered.
+            </p>
+            <p className='lg:flex hidden py-3'>
+              But our commitment doesn't stop at the farm gate. We are actively involved in community outreach programs, educational initiatives, and environmental conservation efforts. By partnering with local schools, charities, and environmental organizations, we strive to create a positive impact beyond our fields, enriching the lives of people and the planet.
+            </p>
+            <p className='lg:flex hidden '>
+              At Althantius Farm, we invite you to join us on this journey towards a healthier, more sustainable future. Experience the goodness of nature with every bite, and know that your choice supports a farm that cares deeply about people, planet, and prosperity.
+            </p>         </div>
 
           <div className='w-full h-full lg:w-3/6 px-4 mb-4 lg:mb-0'>
             <img src={corn} alt='Why Choose Us' className='rounded-2xl w-full' />
@@ -357,13 +375,15 @@ const Main = () => {
         </div>
       </div>
 
+
+
       <div className='p-10'>
         <h1 className="text-3xl font-bold mb-6 text-[#013b0d] text-center ">Make Enquiries</h1>
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <div className="w-full lg:w-3/6 px-4 mb-4 lg:mb-0">
             <img src={ask} alt="Why Choose Us" className="rounded-2xl w-full" />
           </div>
-          <div className="grid gap-4 w-1/2 p-5">
+          <div className="grid gap-4 w-full lg:w-1/2 p-5">
             <label htmlFor="name" className="text-lg font-semibold">Name</label>
             <input type="text" id="name" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
 
