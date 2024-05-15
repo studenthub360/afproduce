@@ -186,7 +186,7 @@ const Main = () => {
           {/* Slider 1 */}
           <div className='w-fit rounded-lg shadow-md'>
           <div className='w-fit h-fit'>
-            <img src={grapes} alt='Grapes' className='rounded-t-lg h-fit w-screen' />
+            <img src={grapes} alt='Grapes' className='rounded-t-lg lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Grapes</h1>
@@ -198,7 +198,7 @@ const Main = () => {
           {/* Apples */}
           <div className='w-fit rounded-lg shadow-md'>
           <div className='w-fit h-fit'>
-            <img src={apples} alt='Apples' className='rounded-t-lg h-fit w-screen' />
+            <img src={apples} alt='Apples' className='rounded-t-lg lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Apples</h1>
@@ -210,7 +210,7 @@ const Main = () => {
           {/* Bananas */}
           <div className='w-fit rounded-lg shadow-md'>
           <div className='w-fit h-fit'>
-            <img src={bananas} alt='Bananas' className='rounded-t-lg h-fit w-screen' />
+            <img src={bananas} alt='Bananas' className='rounded-t-lg lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Bananas</h1>
@@ -223,7 +223,7 @@ const Main = () => {
           {/* Oranges */}
           <div className='w-fit rounded-lg shadow-md'>
             <div className='w-fit h-fit'>
-              <img src={oranges} alt='Oranges' className='rounded-t-lg h-fit w-fit' />
+              <img src={oranges} alt='Oranges' className='rounded-t-lg lg:h-fit lg:w-fit' />
               </div>
               <div className='p-4'>
                 <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
@@ -236,7 +236,7 @@ const Main = () => {
           {/* Strawberries */}
           <div className='w-fit rounded-lg shadow-md'>
             <div className='w-fit h-fit'>
-              <img src={strawberries} alt='Strawberries' className='rounded-t-lg h-fit w-fit' />
+              <img src={strawberries} alt='Strawberries' className='rounded-t-lglg:h-fit lg:w-fit' />
               </div>
               <div className='p-4'>
                 <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
