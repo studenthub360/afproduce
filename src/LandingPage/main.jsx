@@ -185,7 +185,9 @@ const Main = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           {/* Slider 1 */}
           <div className='w-fit rounded-lg shadow-md'>
+          <div className='w-fit h-fit'>
             <img src={grapes} alt='Grapes' className='rounded-t-lg h-fit w-screen' />
+            </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Grapes</h1>
               <p className='text-sm text-center'>Grapes are one of the most versatile and delicious fruits. They come in various colors, flavors, and sizes, making them a favorite among many people.</p>
@@ -195,7 +197,9 @@ const Main = () => {
 
           {/* Apples */}
           <div className='w-fit rounded-lg shadow-md'>
+          <div className='w-fit h-fit'>
             <img src={apples} alt='Apples' className='rounded-t-lg h-fit w-screen' />
+            </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Apples</h1>
               <p className='text-sm text-center'>Apples are a popular fruit known for their crisp texture and sweet or tart flavors. They are rich in nutrients and antioxidants, making them a healthy snack choice.</p>
@@ -205,36 +209,45 @@ const Main = () => {
 
           {/* Bananas */}
           <div className='w-fit rounded-lg shadow-md'>
+          <div className='w-fit h-fit'>
             <img src={bananas} alt='Bananas' className='rounded-t-lg h-fit w-screen' />
+            </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Bananas</h1>
               <p className='text-sm text-center'>Bananas are a tropical fruit with a creamy texture and sweet flavor. They are a good source of potassium, vitamins, and dietary fiber, making them a nutritious addition to your diet.</p>
               <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
             </div>
+ 
           </div>
 
           {/* Oranges */}
           <div className='w-fit rounded-lg shadow-md'>
-            <img src={oranges} alt='Oranges' className='rounded-t-lg h-fit w-fit' />
-            <div className='p-4'>
-              <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
-              <p className='text-sm text-center'>Oranges are citrus fruits known for their refreshing taste and high vitamin C content. They come in different varieties, each offering a unique flavor profile.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+            <div className='w-fit h-fit'>
+              <img src={oranges} alt='Oranges' className='rounded-t-lg h-fit w-fit' />
+              </div>
+              <div className='p-4'>
+                <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
+                <p className='text-sm text-center'>Oranges are citrus fruits known for their refreshing taste and high vitamin C content. They come in different varieties, each offering a unique flavor profile.</p>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
+              </div>
+
           </div>
 
           {/* Strawberries */}
           <div className='w-fit rounded-lg shadow-md'>
-            <img src={strawberries} alt='Strawberries' className='rounded-t-lg h-fit w-fit' />
-            <div className='p-4'>
-              <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
-              <p className='text-sm text-center'>Strawberries are juicy and flavorful berries packed with antioxidants and vitamins. They are commonly used in desserts, salads, and smoothies for their delicious taste.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+            <div className='w-fit h-fit'>
+              <img src={strawberries} alt='Strawberries' className='rounded-t-lg h-fit w-fit' />
+              </div>
+              <div className='p-4'>
+                <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
+                <p className='text-sm text-center'>Strawberries are juicy and flavorful berries packed with antioxidants and vitamins. They are commonly used in desserts, salads, and smoothies for their delicious taste.</p>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </div>
+  
           </div>
           <div className='w-fit rounded-lg shadow-md'>
             <div className='w-fit h-fit'>
-            <img src={watermelons} alt='Watermelons' className='rounded-t-lg  lg:h-fit lg:w-fit' />
+              <img src={watermelons} alt='Watermelons' className='rounded-t-lg  lg:h-fit lg:w-fit' />
             </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Watermelons</h1>
