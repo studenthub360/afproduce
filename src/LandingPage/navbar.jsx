@@ -7,6 +7,14 @@ const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
 
+
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    closeDropdown(); // Close dropdown after clicking a link
+  };
+
   const closeDropdown = () => {
     setDropdownOpen(false);
   };
@@ -83,38 +91,22 @@ const Navbar = () => {
           <div className="hidden lg:flex space-x-10">
             <Link
               to="/"
-              onClick={closeDropdown}
-              className='bg-transparent text-[#013b0d] border-[#013b0d] hover:text-white hover:bg-[#013b0d] border font-semibold text-${isSticky ? "white" : "white"
-            }  px-4 py-1  rounded-lg'
+              onClick={() => handleLinkClick('home')}
+              className={`bg-transparent text-[#013b0d]  px-4 py-1 font-semibold ${activeLink === 'home' ? 'border-[#013b0d] border-b text-[#013b0d] ' : ''
+                }`}
             >
               Home
-
             </Link>
-            {/* <div className=' bg-transparent'>
-
-              <select id='houseType' className='bg-transparent font-semibold text-white  rounded-md px-4  shadow-md focus:outline-none focus:ring-2 focus:ring-black-500'>
-                <option disabled selected >Services</option>
-                <option value='1'>Apartment</option>
-                <option value='2'>Bookings</option>
-                <option value='3'> Short stay</option>
-                <option value='3'> Lodging</option>
-                <option value='3'> leasing</option>
-              </select>
-            </div> */}
-
             <Link
-              onClick={scrollToBenefits}
-              className='bg-transparent text-[#013b0d] border-[#013b0d] hover:text-white hover:bg-[#013b0d] border font-semibold text-${isSticky ? "white" : "white"
-            }  px-4 py-1  rounded-lg'
+              onClick={() => {
+                handleLinkClick('aboutUs');
+                scrollToAboutUs(); // Scroll to benefits section after clicking About Us
+              }}
+              className={`bg-transparent text-[#013b0d]  px-4 py-1 font-semibold ${activeLink === 'aboutUs' ? 'border-[#013b0d] text-[#013b0d] border-b' : ''
+                }`}
             >
               About Us
             </Link>
-            {/* <Link
-              onClick={scrollToContacts}
-              className=" text-white font-semibold "
-            >
-              Contact us
-            </Link> */}
           </div>
           {/* <div className=" hidden lg:flex space-x-4  ">
             <div className='border bg-[#f0f0f0] p-2 flex rounded-full '>

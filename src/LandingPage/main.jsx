@@ -181,11 +181,10 @@ const Main = () => {
 
 
       <div className='p-10 w-screen'>
-        <hr className='h-1 bg-[#013b0d]' />
         <h1 className=' text-center text-[#013b0d] m-auto py-6 lg:text-3xl font-extrabold '>THINGS WE PRODUCE</h1>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           {/* Slider 1 */}
-          <div className='w-full md:w-fit rounded-lg shadow-md'>
+          <div className='w-fit rounded-lg shadow-md'>
             <img src={grapes} alt='Grapes' className='rounded-t-lg h-fit w-full' />
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Grapes</h1>
@@ -195,7 +194,7 @@ const Main = () => {
           </div>
 
           {/* Apples */}
-          <div className='w-full md:w-fit rounded-lg shadow-md'>
+          <div className='w-fit rounded-lg shadow-md'>
             <img src={apples} alt='Apples' className='rounded-t-lg h-fit w-full' />
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Apples</h1>
@@ -205,7 +204,7 @@ const Main = () => {
           </div>
 
           {/* Bananas */}
-          <div className='w-full md:w-fit rounded-lg shadow-md'>
+          <div className='w-fit rounded-lg shadow-md'>
             <img src={bananas} alt='Bananas' className='rounded-t-lg h-fit w-full' />
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Bananas</h1>
@@ -215,7 +214,7 @@ const Main = () => {
           </div>
 
           {/* Oranges */}
-          <div className='w-full md:w-fit rounded-lg shadow-md'>
+          <div className='w-fit rounded-lg shadow-md'>
             <img src={oranges} alt='Oranges' className='rounded-t-lg h-fit w-full' />
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
@@ -225,7 +224,7 @@ const Main = () => {
           </div>
 
           {/* Strawberries */}
-          <div className='w-full md:w-fit rounded-lg shadow-md'>
+          <div className='w-fit rounded-lg shadow-md'>
             <img src={strawberries} alt='Strawberries' className='rounded-t-lg h-fit w-full' />
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
@@ -233,7 +232,7 @@ const Main = () => {
               <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
             </div>
           </div>
-          <div className='w-full md:w-fit rounded-lg shadow-md'>
+          <div className='w-fit rounded-lg shadow-md'>
             <img src={watermelons} alt='Watermelons' className='rounded-t-lg h-fit w-full' />
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Watermelons</h1>
@@ -323,7 +322,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className='py-10'>
+      <div className='py-10' id='aboutus'>
         <h1 className='text-center text-[#013b0d] m-auto py-6 lg:text-3xl font-extrabold'>
           About Us
         </h1>
