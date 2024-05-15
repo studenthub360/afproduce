@@ -348,25 +348,25 @@ const Main = () => {
 
           {/* Content Section */}
           <div className='w-full lg:w-3/5 px-4'>
-            <h1 className='text-3xl  font-bold mb-3 '>ALTHANTIUS FARM</h1>
+            <h1 className='text-3xl  font-bold mb-3 '>AILANTHUS FARM</h1>
 
             <p className='py-3'>
-              Althantius Farm is dedicated to providing the highest quality organic produce to our community. With a focus on sustainable farming practices and a deep-rooted passion for agriculture, we strive to bring fresh, nutritious, and flavorful food to your table. Our commitment to environmental stewardship ensures that every product you receive is not only good for you but also good for the planet.
+              Ailanthus Farm is dedicated to providing the highest quality organic produce to our community. With a focus on sustainable farming practices and a deep-rooted passion for agriculture, we strive to bring fresh, nutritious, and flavorful food to your table. Our commitment to environmental stewardship ensures that every product you receive is not only good for you but also good for the planet.
             </p>
             <p className=''>
-              Our journey began decades ago when our founders, a group of visionary farmers, came together with a shared dream of creating a farm that would revolutionize the way we think about food. Today, that dream is a reality, and Althantius Farm stands as a testament to the power of dedication, hard work, and a love for nature.
+              Our journey began decades ago when our founders, a group of visionary farmers, came together with a shared dream of creating a farm that would revolutionize the way we think about food. Today, that dream is a reality, and Ailanthus Farm stands as a testament to the power of dedication, hard work, and a love for nature.
             </p>
             <p className='lg:flex hidden py-3'>
               What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
             </p>
             <p className='lg:flex hidden '>
-              Our range of products includes a variety of fruits, vegetables, grains, and dairy items, all grown and produced with the utmost care and attention to detail. Whether you're looking for fresh greens for your salad, juicy fruits for a refreshing snack, or wholesome dairy products for your family, Althantius Farm has got you covered.
+              Our range of products includes a variety of fruits, vegetables, grains, and dairy items, all grown and produced with the utmost care and attention to detail. Whether you're looking for fresh greens for your salad, juicy fruits for a refreshing snack, or wholesome dairy products for your family, Ailanthus Farm has got you covered.
             </p>
             <p className='lg:flex hidden py-3'>
               But our commitment doesn't stop at the farm gate. We are actively involved in community outreach programs, educational initiatives, and environmental conservation efforts. By partnering with local schools, charities, and environmental organizations, we strive to create a positive impact beyond our fields, enriching the lives of people and the planet.
             </p>
             <p className='lg:flex hidden '>
-              At Althantius Farm, we invite you to join us on this journey towards a healthier, more sustainable future. Experience the goodness of nature with every bite, and know that your choice supports a farm that cares deeply about people, planet, and prosperity.
+              At Ailanthus Farm, we invite you to join us on this journey towards a healthier, more sustainable future. Experience the goodness of nature with every bite, and know that your choice supports a farm that cares deeply about people, planet, and prosperity.
             </p>         </div>
 
           <div className='w-full h-full lg:w-3/6 px-4 mb-4 lg:mb-0'>
