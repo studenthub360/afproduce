@@ -1,8 +1,7 @@
 // Navbar.js
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
-import { FaShoppingCart, FaSearch } from "react-icons/fa";
+
 
 const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -89,7 +88,7 @@ const Navbar = () => {
             }  px-4 py-1  rounded-lg'
             >
               Home
-              
+
             </Link>
             {/* <div className=' bg-transparent'>
 

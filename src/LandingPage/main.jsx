@@ -4,27 +4,7 @@ import BG from './images/farm.jpg'
 import slide1 from './images/bg.jpg'
 import slide2 from './images/bg2.jpg'
 import slide3 from './images/darkbg.jpg'
-import swim1 from './images/swim1.jpg'
-import swim2 from './images/swim2.jpg'
-import swim3 from './images/swim3.jpg'
-import swim4 from './images/swim4.jpg'
-import laundry1 from './images/laundry1.jpg'
-import laundry2 from './images/laundry2.jpg'
-import chef1 from './images/chef1.jpg'
-import chef2 from './images/chef2.jpg'
-import chef3 from './images/chef3.jpg'
-import chef4 from './images/chef4.jpg'
-import lux1 from './images/lux1.jpg'
-import lux2 from './images/lux2.jpg'
-import lux3 from './images/lux3.jpg'
-import bar1 from './images/bar1.jpg'
-import bar2 from './images/bar2.jpg'
-import bar3 from './images/bar3.jpg'
-import rec1 from './images/rec1.jpg'
-import rec2 from './images/rec2.jpg'
-import rec3 from './images/rec3.jpg'
-import choose from './images/chose.jpg'
-import Slider from 'react-slick';
+import choose from './images/smile.jpg'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import twitter from './images/twitter.png'
@@ -40,43 +20,30 @@ import oranges from './images/oranges.jpg'
 import strawberries from './images/strawberries.jpg'
 import watermelons from './images/watermelon.jpg'
 import explore from './images/market.jpg'
+import corn from './images/girlsmile.jpg'
+import ask from './images/wmarket.jpg'
 
 
 const images = [slide1, slide2, slide3];
 
 const Main = () => {
-  const [checkIn, setCheckIn] = useState();
-  const [checkOut, setCheckOut] = useState();
 
-  // Function to handle Check-in input change
-  const handleCheckInChange = (e) => {
-    setCheckIn(e.target.value);
+
+  const [showInfo, setShowInfo] = useState({
+    generalFood: false,
+    healthyDairy: false,
+    restaurantService: false,
+  });
+
+  // Function to toggle the visibility of a section
+  const toggleInfo = (section) => {
+    setShowInfo((prevShowInfo) => ({
+      ...prevShowInfo,
+      [section]: !prevShowInfo[section],
+    }));
   };
 
 
-  // Function to handle Check-out input change
-  const handleCheckOutChange = (e) => {
-    setCheckOut(e.target.value);
-  };
-
-  // Function to format date and time for display
-  const formatDateTime = (dateTime) => {
-    const date = new Date(dateTime);
-    const formattedDate = date.toLocaleDateString();
-    const formattedTime = date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
-    return `${formattedTime} (${formattedDate})`;
-  };
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-
-  };
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -210,7 +177,11 @@ const Main = () => {
         </div>
       </div>
 
+
+
+
       <div className='p-10 w-screen'>
+        <hr className='h-1 bg-[#013b0d]' />
         <h1 className=' text-center text-[#013b0d] m-auto py-6 lg:text-3xl font-extrabold '>THINGS WE PRODUCE</h1>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           {/* Slider 1 */}
@@ -274,54 +245,109 @@ const Main = () => {
       </div>
 
       <div className='h-screen bg-cover bg-center' style={{ backgroundImage: `url(${explore})` }}>
-        <div>
-          <p className='text-white text-left px-5  pt-60 text-4xl font-extrabold'>Empowering market women general global<br/> supply of farm products</p>
+        <div className='px-5 gap-5'>
+          <p className='text-white text-left   pt-60 pb-10 text-4xl font-extrabold'>Empowering market women general global<br /> supply of farm products</p>
+          <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300'>Explore Now</button>
         </div>
-  
+
       </div>
 
       <div className='py-10'>
-        <h1 className='text-3xl font-bold mb-6 text-center'>Why Choose Us</h1>
-        <div className=' lg:flex  items-center'>
+        <h1 className='text-center text-[#013b0d] m-auto py-6 lg:text-3xl font-extrabold'>
+          Why Choose Us
+        </h1>
+        <div className='lg:flex items-center'>
           {/* Image Section */}
           <div className='w-full h-full lg:w-3/6 px-4 mb-4 lg:mb-0'>
             <img src={choose} alt='Why Choose Us' className='rounded-2xl w-full' />
           </div>
           {/* Content Section */}
-          <div className='w-full lg:w-3/5 px-4 '>
-            <div className='mb-4'>
-              <h2 className='text-lg font-bold mb-2'>Strong Negotiation Skills</h2>
-              <p className='text-sm'>
-                Our team possesses strong negotiation skills to ensure you get the best deals and terms for your investments. We
-                prioritize your interests and work diligently to achieve favorable outcomes.
-              </p>
+          <div className='w-full lg:w-3/5 px-4'>
+            <div className='mb-6'>
+              <h2 className='text-lg text-[#013b0d] font-bold mb-2'>
+                GENERAL FOOD SUPPLY
+                <span
+                  className='cursor-pointer ml-2'
+                  onClick={() => toggleInfo('generalFood')}
+                >
+                  {showInfo.generalFood ? '-' : '+'}
+                </span>
+              </h2>
+              {showInfo.generalFood && (
+                <p className='text-sm'>
+                  Our team possesses strong negotiation skills to ensure you get the
+                  best deals and terms for your investments. We prioritize your
+                  interests and work diligently to achieve favorable outcomes.
+                </p>
+              )}
             </div>
-            <div className='mb-4 bg-[#4D4535] text-white rounded-lg p-2 shadow-lg shadow-[#4D4535]'>
-              <h2 className='text-lg font-bold mb-2'>Luxurious Comfort</h2>
-              <p className='text-sm'>
-                Experience unparalleled luxury and comfort with our carefully curated properties. Each space is designed to
-                provide a sense of relaxation and indulgence, ensuring a delightful living experience for our clients.
-              </p>
+            <div className='mb-6'>
+              <h2 className='text-lg text-[#013b0d] font-bold mb-2'>
+                HEALTHY DAIRY PRODUCTS
+                <span
+                  className='cursor-pointer ml-2'
+                  onClick={() => toggleInfo('healthyDairy')}
+                >
+                  {showInfo.healthyDairy ? '-' : '+'}
+                </span>
+              </h2>
+              {showInfo.healthyDairy && (
+                <p className='text-sm'>
+                  Experience unparalleled luxury and comfort with our carefully
+                  curated properties. Each space is designed to provide a sense of
+                  relaxation and indulgence, ensuring a delightful living experience
+                  for our clients.
+                </p>
+              )}
             </div>
             <div>
-              <h2 className='text-lg font-bold mb-2'>Affordable Prices</h2>
-              <p className='text-sm'>
-                We offer competitive and affordable prices without compromising on quality. Enjoy the best value for your money
-                with our range of premium properties and services, tailored to meet your budget and preferences.
-              </p>
+              <h2 className='text-lg text-[#013b0d] font-bold mb-2'>
+                RESTAURANT SERVICE
+                <span
+                  className='cursor-pointer ml-2'
+                  onClick={() => toggleInfo('restaurantService')}
+                >
+                  {showInfo.restaurantService ? '-' : '+'}
+                </span>
+              </h2>
+              {showInfo.restaurantService && (
+                <p className='text-sm'>
+                  We offer competitive and affordable prices without compromising on
+                  quality. Enjoy the best value for your money with our range of
+                  premium properties and services, tailored to meet your budget and
+                  preferences.
+                </p>
+              )}
             </div>
           </div>
-
         </div>
       </div>
 
+      <div className='py-10'>
+        <h1 className='text-center text-[#013b0d] m-auto py-6 lg:text-3xl font-extrabold'>
+          About Us
+        </h1>
+        <div className='lg:flex '>
+          {/* Image Section */}
 
+          {/* Content Section */}
+          <div className='w-full lg:w-3/5 px-4'>
+            <h1 className='text-3xl font-bold mb-6 '>ALTHANTIUS FARM</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur. Nibh adipiscing etiam enim ullamcorper rutrum aliquet eget lacus sollicitudin. Aliquet morbi ridiculus velit mattis. Sit lacus vulputate phasellus enim. Tellus amet diam laoreet nisl quam.Lorem ipsum dolor sit amet consectetur. Nibh adipiscing etiam enim ullamcorper rutrum aliquet eget lacus sollicitudin. Aliquet morbi ridiculus velit mattis. Sit lacus vulputate phasellus enim. Tellus amet diam laoreet nisl quam.</p>
+          </div>
+
+          <div className='w-full h-full lg:w-3/6 px-4 mb-4 lg:mb-0'>
+            <img src={corn} alt='Why Choose Us' className='rounded-2xl w-full' />
+          </div>
+        </div>
+      </div>
 
       <div className='p-10'>
-        <h1 className="text-3xl font-bold mb-6 text-center ">Make Enquiries</h1>
+        <h1 className="text-3xl font-bold mb-6 text-[#013b0d] text-center ">Make Enquiries</h1>
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <div className="w-full lg:w-3/6 px-4 mb-4 lg:mb-0">
-            <img src={slide2} alt="Why Choose Us" className="rounded-2xl w-full" />
+            <img src={ask} alt="Why Choose Us" className="rounded-2xl w-full" />
           </div>
           <div className="grid gap-4 w-1/2 p-5">
             <label htmlFor="name" className="text-lg font-semibold">Name</label>
@@ -333,16 +359,16 @@ const Main = () => {
             <label htmlFor="message" className="text-lg font-semibold">Message</label>
             <textarea id="message" rows="5" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"></textarea>
 
-            <button className="bg-[#605A59] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#9e8f83] transition-colors duration-300">Send</button>
+            <button className="bg-[#013b0d] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300">Send</button>
           </div>
         </div>
       </div>
 
-      <footer id="contacts" className="bg-[#605A59] text-white ">
+      <footer id="contacts" className="bg-[#013b0d] text-white ">
         <div className="container mx-auto flex flex-col md:flex-row px-6 py-24 md:py-24">
           <div className="md:w-1/3 mb-6 md:mb-0 md:mr-8">
             <Link className="text-2xl  flex pb-5 font-semibold">
-              <h1 className="font-extrabold">AFHousing</h1>{" "}
+              <h1 className="font-extrabold">AFProduce</h1>{" "}
             </Link>
             <p className="text-sm  mb-6 opacity-60">
               Lorem ipsum dolor sit amet consectetur. At malesuada non pretium dui ullamcorper nulla arcu bibendum. Aliquam etiam viverra nam risus volutpat cras massa. Tempor duis ut velit sollicitudin. Pharetra malesuada quisque nulla amet vivamus arcu.
@@ -412,7 +438,7 @@ const Main = () => {
         </div>
         <hr className=' bg-white   w-5/6 justify-center m-auto  '></hr>
         <div className='block lg:flex justify-center text-center mx-4 sm:mx-32 py-5'>
-          <h1 className=' font-light text-center'>2024 © AFHousing Enterprise Ltd</h1>
+          <h1 className=' font-light text-center'>2024 © AFProduce Enterprise Ltd</h1>
         </div>
 
 
