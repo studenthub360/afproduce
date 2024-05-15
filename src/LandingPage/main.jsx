@@ -405,8 +405,8 @@ const Main = () => {
               <h1 className="font-extrabold">AFProduce</h1>{" "}
             </Link>
             <p className="text-sm  mb-6 opacity-60">
-              Lorem ipsum dolor sit amet consectetur. At malesuada non pretium dui ullamcorper nulla arcu bibendum. Aliquam etiam viverra nam risus volutpat cras massa. Tempor duis ut velit sollicitudin. Pharetra malesuada quisque nulla amet vivamus arcu.
-            </p>
+            What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
+e            </p>
             <p className='flex gap-4'>
               <img
                 src={twitter}
