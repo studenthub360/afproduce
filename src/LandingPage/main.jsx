@@ -233,7 +233,9 @@ const Main = () => {
             </div>
           </div>
           <div className='w-fit rounded-lg shadow-md'>
-            <img src={watermelons} alt='Watermelons' className='rounded-t-lg h-fit w-fit' />
+            <div className='w-fit h-fit'>
+            <img src={watermelons} alt='Watermelons' className='rounded-t-lg  lg:h-fit lg:w-fit' />
+            </div>
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Watermelons</h1>
               <p className='text-sm text-center'>Watermelons are refreshing fruits known for their juicy and sweet flesh. They are a summertime favorite and are often enjoyed in salads, smoothies, and as a hydrating snack.</p>
