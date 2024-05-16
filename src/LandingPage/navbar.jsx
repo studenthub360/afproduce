@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` bg-[#fff] shadow-md min-w-fit ${isSticky ? "sticky top-0 z-50" : ""}`}
+      className={` bg-[#fff] shadow-md min-w-fit sticky ${isSticky ? "sticky top-0 z-50" : ""}`}
     >
       <div className="container mx-auto px-4 items-start lg:px-1">
         <div className="py-3 flex justify-between items-center">

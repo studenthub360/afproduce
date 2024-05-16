@@ -67,6 +67,7 @@ const Main = () => {
     try {
       // const token = sessionStorage.getItem("accessToken");
       setIsLoading(true);
+      const company = "Ailanthus Farm Products";
 
       // Create a FormData object to send the image file
       const newform = {
@@ -75,7 +76,6 @@ const Main = () => {
         email: email,
         message: message,
       };
-
       console.log(newform);
       // Make the API call
       const response = await fetch(
@@ -519,7 +519,7 @@ const Main = () => {
           </div>
           <div className="grid gap-4 w-full lg:w-1/2 p-5">
             <label htmlFor="company" className="text-lg font-semibold">Company</label>
-            <input type="text" id="company" name="company" value={company} onChange={(e) => setCompany(e.target.value)} className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
+            <p id="company" name="company" value={company} onChange={(e) => setCompany(e.target.value)} className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" >Ailanthus Farm Products</p>
 
 
             <label htmlFor="name" className="text-lg font-semibold">Name</label>
@@ -536,7 +536,6 @@ const Main = () => {
         </div>
       </div>
       
-
 
       <footer id="contacts" className="bg-[#013b0d] text-white ">
         <div className="container mx-auto flex flex-col md:flex-row px-6 py-24 md:py-24">
