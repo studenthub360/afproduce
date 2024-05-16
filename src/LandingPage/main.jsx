@@ -22,12 +22,91 @@ import watermelons from './images/watermelon.jpg'
 import explore from './images/market.jpg'
 import corn from './images/girlsmile.jpg'
 import ask from './images/wmarket.jpg'
+import axios from 'axios'; // Import axios
 
 
 const images = [slide1, slide2, slide3];
 
 const Main = () => {
+  const [company, setCompany] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
+  // const [formData, setFormData] = useState({
+  //   company: '',
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  // });
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
+  // const [successMessage, setSuccessMessage] = useState('');
+
+
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.post('https://af-industries.onrender.com/api/data', formData);
+  //     console.log(response.data); // Log the response from the server
+  //     setSuccessMessage('Form submitted successfully!'); // Set success message
+  //   } catch (error) {
+  //     console.error('Error submitting form:', error);
+  //     // Handle error, show error message to the user, etc.
+  //   }
+  // };
+
+  const sendForm = async () => {
+    try {
+      // const token = sessionStorage.getItem("accessToken");
+      setIsLoading(true);
+
+      // Create a FormData object to send the image file
+      const newform = {
+        company: company,
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      console.log(newform);
+      // Make the API call
+      const response = await fetch(
+        "https://af-industries.onrender.com/api/data",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newform),
+        }
+      );
+
+      if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(`Failed to add event: ${errorMessage}`);
+      }
+
+      // Reset form fields and fetch updated events
+      setCompany("");
+      setName("");
+      setEmail("");
+      setMessage("");
+
+    } catch (error) {
+      console.error(error.message);
+      alert("Failed to add event. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const [showInfo, setShowInfo] = useState({
     generalFood: false,
@@ -432,23 +511,27 @@ const Main = () => {
 
 
 
-      <div className='p-10' id='contacts'>
+      <div className='p-10' id='contacts' >
         <h1 className="text-3xl font-bold mb-6 text-[#013b0d] text-center ">Make Enquiries</h1>
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <div className="w-full lg:w-3/6 px-4 mb-4 lg:mb-0">
             <img src={ask} alt="Why Choose Us" className="rounded-2xl w-full" />
           </div>
           <div className="grid gap-4 w-full lg:w-1/2 p-5">
+            <label htmlFor="company" className="text-lg font-semibold">Company</label>
+            <input type="text" id="company" name="company" value={company} onChange={(e) => setCompany(e.target.value)} className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
+
+
             <label htmlFor="name" className="text-lg font-semibold">Name</label>
-            <input type="text" id="name" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
+            <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
 
             <label htmlFor="email" className="text-lg font-semibold">Email</label>
-            <input type="email" id="email" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
+            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500" />
 
             <label htmlFor="message" className="text-lg font-semibold">Message</label>
-            <textarea id="message" rows="5" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"></textarea>
+            <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"></textarea>
 
-            <button className="bg-[#013b0d] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300">Send</button>
+            <button onClick={sendForm} className="bg-[#013b0d] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300">Send</button>
           </div>
         </div>
       </div>
@@ -461,7 +544,7 @@ const Main = () => {
             </Link>
             <p className="text-sm  mb-6 opacity-60">
               What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
-              e            </p>
+                          </p>
             {/* <p className='flex gap-4'>
               <img
                 src={twitter}
