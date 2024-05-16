@@ -107,7 +107,7 @@ const Main = () => {
         setMessage("");
         // Scroll to the top of the page
         window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 2000); 
+      }, 2000);
 
     } catch (error) {
       console.error(error.message);
@@ -540,10 +540,10 @@ const Main = () => {
             <label htmlFor="message" className="text-lg font-semibold">Message</label>
             <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"></textarea>
 
-            <button onClick={sendForm} className="bg-[#013b0d] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300"disabled={loading}>{loading ? "Loading..." : "Send"}</button>
+            <button onClick={sendForm} className="bg-[#013b0d] text-white text-center w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300" disabled={loading}>{loading ? "Loading..." : "Send"}</button>
             {formSubmitted && (
-            <div className="mt-4 text-center text-[#013b0d]">Form submitted successfully!</div>
-          )} 
+              <div className="mt-4 text-center text-[#013b0d]">Form submitted successfully!</div>
+            )}
           </div>
         </div>
       </div>
