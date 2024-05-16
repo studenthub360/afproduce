@@ -108,59 +108,9 @@ const Navbar = () => {
               About Us
             </Link>
           </div>
-          {/* <div className=" hidden lg:flex space-x-4  ">
-            <div className='border bg-[#f0f0f0] p-2 flex rounded-full '>
-              <FaSearch className=" opacity-40" />
-              <input
-                type="text"
-                placeholder="Search for products..."
-                className={`p-2 h-2 w-60 text-sm  bg-[#f0f0f0]  focus:outline-none focus:border-green-500 `}
-
-              />
-            </div>
-          </div> */}
-
-          {/* <div className="flex gap-2">
-            {/* <Link to="/signup">
-              <button className={`font-semibold text-white px-4 py-1`}>Sign in</button>
-
-            </Link> */}
-          {/* <div
-              // icon={<FaUser />}
-              alt="profile"
-              className="rounded-full w-8  lg:w-12 h-8 lg:h-8 bg-[#fff]   flex lg:hidden items-center justify-center"
-            >
-              <FaSearch
-                size={20} />
-            </div> */}
-          {/* <div
-              // icon={<FaUser />}
-              alt="profile"
-              className="rounded-full w-8  lg:w-12 h-8 lg:h-8 bg-[#fff]   flex items-center justify-center"
-            >
-              <FaShoppingCart
-                size={20} />
-            </div> */}
-          {/* <div
-              // icon={<FaUser />}
-              alt="profile"
-              className="rounded-full w-8  lg:w-8 h-8 lg:h-8 bg-[#fff] border border-black flex items-center justify-center"
-            >
-              <FaUser
-                size={20} />
-            </div> */}
-          {/* <Link to="/login">
-              <button
-                className={`bg-transparent text-white border-white border font-semibold text-${isSticky ? "white" : "white"
-                  }  px-4 py-1  rounded-lg `}
-              >
-                Get Started
-              </button>
-            </Link> */}
-          {/* </div> */}
 
           {isDropdownOpen && (
-            <div className="lg:hidden absolute z-10   top-0 right-0 h-full w-4/5 bg-[#013b0d] text-white shadow-md p-4">
+            <div className="lg:hidden absolute z-10 top-0 right-0 w-4/5 min-h-screen bg-[#013b0d] text-white shadow-md p-4">
               <div className="flex text-white flex-col space-y-6">
                 <Link
                   to="/"
@@ -175,30 +125,6 @@ const Navbar = () => {
                 >
                   About Us
                 </Link>
-                {/* <Link
-                  onClick={scrollToBenefits}
-                  className="block  font-semibold py-2 hover:bg-gray-100 rounded"
-                >
-                  New Arrivals
-                </Link>
-                <Link
-                  onClick={scrollToContacts}
-                  className="block  font-semibold py-2 hover:bg-gray-100 rounded"
-                >
-                  Brands
-                </Link>
-                <Link to="/signup">
-                  <button className="block font-semibold text-left py-2">
-                    Sign Up
-                  </button>
-                </Link>
-                <Link
-                  to="/login"
-                  onClick={closeDropdown}
-                  className="block bg-[#000] text-white font-semibold py-1 rounded-lg text-center w-20"
-                >
-                  <button>Log in</button>
-                </Link> */}
               </div>
             </div>
           )}

@@ -159,7 +159,7 @@ const Main = () => {
         <Navbar />
         <div className='text-white text-center'>
           <p className='pt-60 m-auto lg:text-5xl font-extrabold'>PURE ORGANIC FARM PRODUCE</p>
-          <p className='drop-shadow-lg py-5'>
+          <p className=' py-5 '>
             We offer a wide range of pure organic farm produce, carefully grown and harvested to ensure freshness and quality.<br /> Our commitment to sustainable farming practices ensures that you get nutritious and delicious products every time.<br /> Try our organic fruits, vegetables, grains, and more for a healthy lifestyle.
           </p>
           <Link
@@ -535,7 +535,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      
+
 
       <footer id="contacts" className="bg-[#013b0d] text-white ">
         <div className="container mx-auto flex flex-col md:flex-row px-6 py-24 md:py-24">
@@ -545,7 +545,7 @@ const Main = () => {
             </Link>
             <p className="text-sm  mb-6 opacity-60">
               What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
-                          </p>
+            </p>
             {/* <p className='flex gap-4'>
               <img
                 src={twitter}
