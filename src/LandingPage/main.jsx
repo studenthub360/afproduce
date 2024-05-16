@@ -43,6 +43,12 @@ const Main = () => {
     }));
   };
 
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    // Close dropdown after clicking a link
+  };
 
   const responsive = {
     desktop: {
@@ -62,6 +68,12 @@ const Main = () => {
     },
   }
 
+
+  const scrollToContacts = () => {
+    const aboutUsSection = document.getElementById("contacts");
+    aboutUsSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className=' overflow-x-hidden'>
       <div className='h-screen bg-cover bg-center' style={{ backgroundImage: `url(${BG})` }}>
@@ -71,9 +83,15 @@ const Main = () => {
           <p className='drop-shadow-lg py-5'>
             We offer a wide range of pure organic farm produce, carefully grown and harvested to ensure freshness and quality.<br /> Our commitment to sustainable farming practices ensures that you get nutritious and delicious products every time.<br /> Try our organic fruits, vegetables, grains, and more for a healthy lifestyle.
           </p>
-          <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg font-semibold hover:bg-[#396b43] transition-colors duration-300'>
-            Explore Now
-          </button>
+          <Link
+            onClick={() => {
+              handleLinkClick('contacts');
+              scrollToContacts(); // Scroll to benefits section after clicking About Us
+            }}>
+            <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg font-semibold hover:bg-[#396b43] transition-colors duration-300'>
+              Explore Now
+            </button>
+          </Link>
         </div>
         {/* <div className='flex justify-center gap-5 px-10 py-4 rounded-lg bg-[#D9D9D9] bg-opacity-20 w-fit lg:mx-32  '>
        
@@ -195,7 +213,13 @@ const Main = () => {
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Grapes</h1>
               <p className='text-sm text-center'>Grapes are one of the most versatile and delicious fruits. They come in various colors, flavors, and sizes, making them a favorite among many people.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              <Link
+                onClick={() => {
+                  handleLinkClick('contacts');
+                  scrollToContacts(); // Scroll to benefits section after clicking About Us
+                }}>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </Link>
             </div>
           </div>
 
@@ -207,8 +231,13 @@ const Main = () => {
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Apples</h1>
               <p className='text-sm text-center'>Apples are a popular fruit known for their crisp texture and sweet or tart flavors. They are rich in nutrients and antioxidants, making them a healthy snack choice.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+              <Link
+                onClick={() => {
+                  handleLinkClick('contacts');
+                  scrollToContacts(); // Scroll to benefits section after clicking About Us
+                }}>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </Link>            </div>
           </div>
 
           {/* Bananas */}
@@ -219,8 +248,13 @@ const Main = () => {
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Bananas</h1>
               <p className='text-sm text-center'>Bananas are a tropical fruit with a creamy texture and sweet flavor. They are a good source of potassium, vitamins, and dietary fiber, making them a nutritious addition to your diet.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+              <Link
+                onClick={() => {
+                  handleLinkClick('contacts');
+                  scrollToContacts(); // Scroll to benefits section after clicking About Us
+                }}>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </Link>            </div>
 
           </div>
 
@@ -232,8 +266,13 @@ const Main = () => {
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Oranges</h1>
               <p className='text-sm text-center'>Oranges are citrus fruits known for their refreshing taste and high vitamin C content. They come in different varieties, each offering a unique flavor profile.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+              <Link
+                onClick={() => {
+                  handleLinkClick('contacts');
+                  scrollToContacts(); // Scroll to benefits section after clicking About Us
+                }}>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </Link>            </div>
 
           </div>
 
@@ -245,8 +284,13 @@ const Main = () => {
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Strawberries</h1>
               <p className='text-sm text-center'>Strawberries are juicy and flavorful berries packed with antioxidants and vitamins. They are commonly used in desserts, salads, and smoothies for their delicious taste.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+              <Link
+                onClick={() => {
+                  handleLinkClick('contacts');
+                  scrollToContacts(); // Scroll to benefits section after clicking About Us
+                }}>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </Link>            </div>
 
           </div>
           <div className='w-fit rounded-lg shadow-md'>
@@ -256,8 +300,13 @@ const Main = () => {
             <div className='p-4'>
               <h1 className='text-lg font-semibold mb-2 text-center'>Watermelons</h1>
               <p className='text-sm text-center'>Watermelons are refreshing fruits known for their juicy and sweet flesh. They are a summertime favorite and are often enjoyed in salads, smoothies, and as a hydrating snack.</p>
-              <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d]  font-bold py-2 px-4 rounded'>Inquire</button>
-            </div>
+              <Link
+                onClick={() => {
+                  handleLinkClick('contacts');
+                  scrollToContacts(); // Scroll to benefits section after clicking About Us
+                }}>
+                <button className='block mx-auto mt-4 text-[#013b0d] border-[#013b0d] border hover:text-white hover:bg-[#013b0d] font-bold py-2 px-4 rounded'>Inquire</button>
+              </Link>            </div>
           </div>
         </div>
       </div>
@@ -265,7 +314,13 @@ const Main = () => {
       <div className='h-screen bg-cover bg-center' style={{ backgroundImage: `url(${explore})` }}>
         <div className='px-5 gap-5'>
           <p className='text-white text-left   pt-60 pb-10 text-4xl font-extrabold'>Empowering market women general global<br /> supply of farm products</p>
-          <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300'>Explore Now</button>
+          <Link
+            onClick={() => {
+              handleLinkClick('contacts');
+              scrollToContacts(); // Scroll to benefits section after clicking About Us
+            }}>
+            <button className='bg-[#013b0d] text-white px-2 w-32 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300'>Explore Now</button>
+          </Link>
         </div>
 
       </div>
@@ -377,7 +432,7 @@ const Main = () => {
 
 
 
-      <div className='p-10'>
+      <div className='p-10' id='contacts'>
         <h1 className="text-3xl font-bold mb-6 text-[#013b0d] text-center ">Make Enquiries</h1>
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <div className="w-full lg:w-3/6 px-4 mb-4 lg:mb-0">
@@ -400,14 +455,14 @@ const Main = () => {
 
       <footer id="contacts" className="bg-[#013b0d] text-white ">
         <div className="container mx-auto flex flex-col md:flex-row px-6 py-24 md:py-24">
-          <div className="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+          <div className=" mb-6 md:mb-0 md:mr-8">
             <Link className="text-2xl  flex pb-5 font-semibold">
               <h1 className="font-extrabold">AFProduce</h1>{" "}
             </Link>
             <p className="text-sm  mb-6 opacity-60">
-            What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
-e            </p>
-            <p className='flex gap-4'>
+              What sets us apart is our holistic approach to farming. We believe in working in harmony with nature, using sustainable methods that preserve and enhance the land for future generations. From organic soil management to water conservation practices, every aspect of our farm is designed to minimize environmental impact while maximizing yield and quality.
+              e            </p>
+            {/* <p className='flex gap-4'>
               <img
                 src={twitter}
                 alt="Group 8"
@@ -425,9 +480,9 @@ e            </p>
               />
 
 
-            </p>
+            </p> */}
           </div>
-          <div className=' grid grid-cols-2 lg:flex gap-20'>
+          {/* <div className=' grid grid-cols-2 lg:flex gap-20'>
             <div className="md:w-1/4 ">
               <h1 className="text-xl font-light mb-4">COMPANY</h1>
               <ul className="text-sm">
@@ -468,7 +523,7 @@ e            </p>
 
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
         <hr className=' bg-white   w-5/6 justify-center m-auto  '></hr>
         <div className='block lg:flex justify-center text-center mx-4 sm:mx-32 py-5'>
