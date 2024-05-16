@@ -32,7 +32,9 @@ const Main = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
 
   // const [formData, setFormData] = useState({
   //   company: '',
@@ -66,7 +68,7 @@ const Main = () => {
   const sendForm = async () => {
     try {
       // const token = sessionStorage.getItem("accessToken");
-      setIsLoading(true);
+      setLoading(true);
       const company = "Ailanthus Farm Products";
 
       // Create a FormData object to send the image file
@@ -95,16 +97,23 @@ const Main = () => {
       }
 
       // Reset form fields and fetch updated events
-      setCompany("");
-      setName("");
-      setEmail("");
-      setMessage("");
+      setTimeout(() => {
+        setLoading(false);
+        setFormSubmitted(true);
+        // Reset form fields after submission
+        setCompany("");
+        setName("");
+        setEmail("");
+        setMessage("");
+        // Scroll to the top of the page
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 2000); 
 
     } catch (error) {
       console.error(error.message);
       alert("Failed to add event. Please try again.");
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
   };
 
@@ -531,7 +540,10 @@ const Main = () => {
             <label htmlFor="message" className="text-lg font-semibold">Message</label>
             <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows="5" className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"></textarea>
 
-            <button onClick={sendForm} className="bg-[#013b0d] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300">Send</button>
+            <button onClick={sendForm} className="bg-[#013b0d] text-white px-6 w-24 py-3 rounded-lg  font-semibold hover:bg-[#396b43] transition-colors duration-300"disabled={loading}>{loading ? "Loading..." : "Send"}</button>
+            {formSubmitted && (
+            <div className="mt-4 text-center text-[#013b0d]">Form submitted successfully!</div>
+          )} 
           </div>
         </div>
       </div>
